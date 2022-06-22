@@ -1,0 +1,219 @@
+:root {
+  --light-blue: hsl(210, 46%, 95%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --dk-blue: hsl(214, 17%, 51%);
+  --xdk-blue: hsl(217, 19%, 35%);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--light-blue);
+  font-family: 'Manrope', sans-serif;
+}
+
+.card {
+  background: #fff;
+  border-radius: 1.2rem;
+  margin: 4rem 2rem;
+}
+
+.drawers {
+  border-top-left-radius: 1.2rem;
+  border-top-right-radius: 1.2rem;
+  overflow: hidden;
+}
+
+.drawers img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: fill;
+}
+
+.card-text {
+  padding: 0.5rem 2rem;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.profile {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.profile img {
+  border-radius: 50%;
+  max-width: 3rem;
+  height: 100%;
+}
+
+.profile-name {
+  margin-top: -10px;
+}
+
+h2 {
+  font-size: 13px;
+  margin-left: -60px;
+}
+
+.profile-name p {
+  font-size: 12px;
+  margin-left: -60px;
+}
+
+/* .share {
+  border-radius: 100%;
+} */
+
+/* #svg {
+  background-color: green;
+  width: 25px;
+  height: 25px;
+  border: 5px solid green;
+}
+
+.circle {
+  border-radius: 100%;
+} */
+
+.icon-share {
+  position: relative;
+  display: block;
+  overflow: visible;
+}
+
+.share img {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: var(--light-blue);
+  border: 5px solid var(--light-blue);
+}
+
+button {
+  border: none;
+  border-radius: 40%;
+}
+
+.tooltiptext {
+  /* transition: transform 300ms ease-in-out; */
+  display: none;
+  position: absolute;
+  background: var(--xdk-blue);
+  width: 800%;
+  height: 4rem;
+  bottom: 100%;
+  margin: auto -29rem auto -16rem;
+  bottom: -12%;
+  z-index: 1000;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 0.5rem;
+}
+
+.icon-share:hover .tooltiptext {
+  display: block;
+}
+
+.tooltiptext h3 {
+  display: inline-block;
+  margin: 4px 4px;
+}
+
+.tooltiptext img {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: var(--xdk-blue);
+  border: 5px solid var(--xdk-blue);
+}
+
+@media (min-width: 56em) {
+  body {
+    padding: 5rem;
+  }
+
+  .card {
+    /* position: relative; */
+    display: flex;
+    background: #fff;
+    border-radius: 1.2rem;
+    margin: 7rem 13rem;
+    width: 45rem;
+    height: 15rem;
+  }
+
+  .card {
+    flex: 1;
+  }
+
+  .drawers {
+    border-top-right-radius: 0;
+    border-top-left-radius: 1.2rem;
+    border-bottom-left-radius: 1.2rem;
+    max-width: 20rem;
+    height: 100%;
+  }
+
+  .card-text {
+    padding: 0.4rem 2rem 2rem 2rem;
+    font-size: 12px;
+    opacity: 0.9;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  h2 {
+    margin-left: -80px;
+  }
+
+  .profile-name p {
+    font-size: 12px;
+    margin-left: -80px;
+  }
+
+  .tooltiptext {
+    width: 180px;
+    height: 40px;
+    bottom: 100%;
+    left: 50%;
+    margin-bottom: 1rem;
+    margin-left: -85px;
+    z-index: 1;
+    border-radius: 10px;
+    padding: 0.5rem;
+  }
+
+  .icon-share .tooltiptext::after {
+    content: ' ';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5%;
+    border-width: 10px;
+    border-style: solid;
+    border-color: var(--xdk-blue) transparent transparent transparent;
+  }
+
+  .icon-share:hover .tooltiptext {
+    display: block;
+  }
+}
